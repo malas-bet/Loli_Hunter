@@ -24,16 +24,33 @@
         }
 
         th, td {
-            padding: 10px;
+            padding: 0; /* penting biar gambar full */
             border: 1px solid #444;
         }
 
         th {
+            padding: 10px;
             background-color: #222;
         }
 
         tr:nth-child(even) {
             background-color: #1a1a1a;
+        }
+
+        td.profile-cell {
+            width: 60px;
+            height: 60px;
+        }
+
+        img.profile {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* isi penuh tanpa gepeng */
+            display: block;
+        }
+
+        td:not(.profile-cell) {
+            padding: 10px;
         }
     </style>
 </head>
@@ -46,20 +63,36 @@
 <table>
     <tr>
         <th>Rank</th>
+        <th>Profile</th>
         <th>Player</th>
         <th>Damage</th>
     </tr>
 
     <tr>
         <td>1</td>
+        <td class="profile-cell">
+            <img src="char potrait/Daisy_Myth.png" class="profile">
+        </td>
         <td>malas</td>
         <td>999,999</td>
     </tr>
 
     <tr>
         <td>2</td>
+        <td class="profile-cell">
+            <img src="char potrait/Eunha_Myth.png" class="profile">
+        </td>
         <td>babylon</td>
         <td>850,000</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td class="profile-cell">
+            <img src="char potrait/Eunha_Myth.png" class="profile">
+        </td>
+        <td>Nexora</td>
+        <td>80,000</td>
     </tr>
 
 </table>
